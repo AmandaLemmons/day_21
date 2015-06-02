@@ -1,0 +1,22 @@
+CREATE TABLE
+cities
+(place_name varchar,
+estimate_2013 integer,
+census_2010 integer,
+change decimal);
+
+
+insert into cities
+(place_name, estimate_2013, census_2010, change)
+values
+('Houston', 2195914, 2100263, 4.55);
+('San Antonio', 1409019, 1327407, 6.15);
+('Dallas', 1257676, 1197816, 5.00);
+('Austin', 885400, 790390, 12.02);
+('Fort Worth', 792727, 741206, 6.95);
+
+select * from cities;
+
+select * from cities order by change DESC LIMIT 1;
+
+delete from cities where place_name = 'Dallas';
